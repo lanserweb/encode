@@ -1,0 +1,2 @@
+<h1>{{BANNER OR SLIDER}}</h1>
+ 
