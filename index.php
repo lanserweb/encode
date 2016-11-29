@@ -1,13 +1,13 @@
 <?php 
-// if(preg_match('~/ebuy/~', $_SERVER['REQUEST_URI']))
-// $serv = preg_replace('~/ebuy/~', '', $_SERVER['REQUEST_URI']);
-// echo $serv;
-// $arr = explode('/', $serv);
-// print_r($arr);
-// 
-// error_reporting(0);
 
 session_start();
+
+
+echo $_SESSION['user'];
+$_SESSION['lang'] = 'am';
+define('ROOT', dirname(__FILE__));
+
+
 
 set_include_path(get_include_path()
 					.PATH_SEPARATOR.'application/components'
@@ -16,8 +16,6 @@ set_include_path(get_include_path()
 					.PATH_SEPARATOR.'application/views'
 					);
 
-define('ROOT', dirname(__FILE__));
-// echo ROOT;
 function __autoload($class) {
 	try {
 		if(!include_once($class.'.php'))
@@ -33,4 +31,3 @@ try {
 } catch(Exception $e) {
 	echo $e->getMessage();
 }
-// echo $front->getBody();

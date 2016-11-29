@@ -12,7 +12,7 @@ class IndexController implements IController {
 
 		// $categories = new Categories();//create categories object
 		$mnmenu = new Menu(); //create products object
-		$menu = $mnmenu->getMenu();
+		$menu = $mnmenu->getMainMenu();
 
 		
 
